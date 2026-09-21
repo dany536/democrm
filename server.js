@@ -46,10 +46,10 @@ const corsOptions = {
 
 
 // When deploy project
-//app.use(cors());
+app.use(cors());
 
 // When run locally project
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 // Database email : deepankar@veroestate.in (Testing Database) (Dummy)
 mongoose.connect(process.env.MONGODB_URI)

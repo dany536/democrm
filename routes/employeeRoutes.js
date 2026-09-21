@@ -211,7 +211,7 @@ router.post('/login', (req, res) => {
 
           const accessToken = jwt.sign(payload, "jwt-access-token-secret-key", { expiresIn: '1h' })
           res.cookie('accessToken', accessToken, { maxAge: 36000000 })
-          if (user.email === "Admin@gmail.com") {
+          if (user.email === "admin@gmail.com") {
             return res.json({ Role: "Admin", Message: "Admin Login", Id: user._id })
           } else {
             return res.json({ Role: "Employee", Message: "User Login", Id: user._id })
