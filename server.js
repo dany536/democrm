@@ -52,7 +52,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Database email : deepankar@veroestate.in (Testing Database) (Dummy)
-mongoose.connect("mongodb+srv://deepankar:yzQ5wZnfjyXN9VKY@demolead.x51vsvt.mongodb.net/?retryWrites=true&w=majority&appName=DemoLead")
+mongoose.connect(Process.env.MONGODB_URI)
     .then(() => console.log("Database is connected"))
     .catch((error) => console.log(error));
 
